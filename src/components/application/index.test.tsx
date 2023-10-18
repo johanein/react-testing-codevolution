@@ -4,6 +4,7 @@ import { Application } from ".";
 describe("Application", () => {
   test("should render", () => {
     render(<Application />);
+    // getByRole
     const headingOne = screen.getByRole("heading", {
       //   name: "Job application form",
       level: 1,
@@ -31,6 +32,41 @@ describe("Application", () => {
 
     const termsElement = screen.getByRole("checkbox");
     expect(termsElement).toBeInTheDocument();
+
+    // getByLabelText
+    const elementUsingLabel = screen.getByLabelText("Name", {
+      selector: "input", // This is optional and can be values "input" and 'select". Used for specificity while having duplicates
+    });
+    expect(elementUsingLabel).toBeInTheDocument();
+
+    const wrapperElementLabel = screen.getByLabelText(
+      "I agree to the terms and conditions"
+    );
+    expect(wrapperElementLabel).toBeInTheDocument();
+
+    // getByPlaceholderText
+    const elementUsingPlaceholder = screen.getByPlaceholderText("Fullname");
+    expect(elementUsingPlaceholder).toBeInTheDocument();
+
+    // getByText
+    const elementUsingText = screen.getByText("All fields are mandatory");
+    expect(elementUsingText).toBeInTheDocument();
+
+    //getByDisplayValue
+    const elementUsingGetByDisplayValue = screen.getByDisplayValue("Vishwas");
+    expect(elementUsingGetByDisplayValue).toBeInTheDocument();
+
+    // getByAltText
+    const elementUsingAltText = screen.getByAltText("a person with a laptop");
+    expect(elementUsingAltText).toBeInTheDocument();
+
+    // getByTitle
+    const elementUsingTitle = screen.getByTitle("close");
+    expect(elementUsingTitle).toBeInTheDocument();
+
+    // getByTestId
+    const elementByTestId = screen.getByTestId("custom-element");
+    expect(elementByTestId).toBeInTheDocument();
   });
   test("should render disabled button", () => {
     render(<Application />);
