@@ -55,3 +55,6 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 6. getByAltText
 7. getByTitle
 8. getByTestId
+
+use queryBy for checking elements that is not in the DOM
+use findBy for waiting for a element to appear after sometime in the component
