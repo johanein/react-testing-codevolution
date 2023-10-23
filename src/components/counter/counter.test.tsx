@@ -8,7 +8,7 @@ describe("Counter block", () => {
     const headerElement = screen.getByRole("heading");
     expect(headerElement).toBeInTheDocument();
     const incrementButton = screen.getByRole("button", {
-      name: "Increment",
+      name: "Increment"
     });
     expect(incrementButton).toBeInTheDocument();
   });
@@ -17,7 +17,7 @@ describe("Counter block", () => {
     userEvent.setup();
     render(<Counter />);
     const incrementButton = screen.getByRole("button", {
-      name: "Increment",
+      name: "Increment"
     });
     await userEvent.click(incrementButton);
     const headerElement = screen.getByRole("heading");
@@ -30,7 +30,7 @@ describe("Counter block", () => {
     await userEvent.type(inputElement, "10");
     expect(inputElement).toHaveValue(10);
     const buttonElement = screen.getByRole("button", {
-      name: "Set",
+      name: "Set"
     });
     await userEvent.click(buttonElement);
     const headerElement = screen.getByRole("heading");

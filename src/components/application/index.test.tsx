@@ -7,23 +7,23 @@ describe("Application", () => {
     // getByRole
     const headingOne = screen.getByRole("heading", {
       //   name: "Job application form",
-      level: 1,
+      level: 1
     });
     expect(headingOne).toBeInTheDocument();
 
     const headingTwo = screen.getByRole("heading", {
       //   name: "Section 1",
-      level: 2,
+      level: 2
     });
     expect(headingTwo).toBeInTheDocument();
 
     const nameElement = screen.getByRole("textbox", {
-      name: "Name",
+      name: "Name"
     });
     expect(nameElement).toBeInTheDocument();
 
     const bioElement = screen.getByRole("textbox", {
-      name: "Bio",
+      name: "Bio"
     });
     expect(bioElement).toBeInTheDocument();
 
@@ -35,7 +35,7 @@ describe("Application", () => {
 
     // getByLabelText
     const elementUsingLabel = screen.getByLabelText("Name", {
-      selector: "input", // This is optional and can be values "input" and 'select". Used for specificity while having duplicates
+      selector: "input" // This is optional and can be values "input" and 'select". Used for specificity while having duplicates
     });
     expect(elementUsingLabel).toBeInTheDocument();
 
@@ -71,6 +71,7 @@ describe("Application", () => {
   test("should render disabled button", () => {
     render(<Application />);
     const textElem = screen.getByRole("button");
+    // expect(textElem).not.toBeEnabled(); // by the use of eslint-plugin-jest-dom package error will be shown for this statement
     expect(textElem).toBeDisabled();
   });
 });

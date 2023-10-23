@@ -7,8 +7,8 @@ export const handlers = [
       ctx.json([
         { name: "Bruce Wayne" },
         { name: "Clark Kent" },
-        { name: "Princess Diana" },
+        { name: "Princess Diana" }
       ])
     );
-  }),
+  })
 ];

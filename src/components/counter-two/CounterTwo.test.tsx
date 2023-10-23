@@ -21,10 +21,10 @@ describe("CounterTwo", () => {
       />
     );
     const incrementButton = screen.getByRole("button", {
-      name: "Increment",
+      name: "Increment"
     });
     const decrementButton = screen.getByRole("button", {
-      name: "Decrement",
+      name: "Decrement"
     });
     await userEvent.click(incrementButton);
     await userEvent.click(decrementButton);

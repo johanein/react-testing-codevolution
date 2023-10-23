@@ -17,14 +17,14 @@ describe("Skills", () => {
   test("renders login button", () => {
     render(<Skills skills={skills} />);
     const loginButton = screen.getByRole("button", {
-      name: "Login",
+      name: "Login"
     });
     expect(loginButton).toBeInTheDocument();
   });
   test("renders button Start learning", () => {
     render(<Skills skills={skills} />);
     const loginButton = screen.queryByRole("button", {
-      name: "Start learning",
+      name: "Start learning"
     });
     expect(loginButton).not.toBeInTheDocument();
   });
@@ -35,10 +35,10 @@ describe("Skills", () => {
     const loginButton = await screen.findByRole(
       "button",
       {
-        name: "Start learning",
+        name: "Start learning"
       },
       {
-        timeout: 2000,
+        timeout: 2000
       }
     );
     // screen.debug();
