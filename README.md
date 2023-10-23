@@ -58,3 +58,5 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 use queryBy for checking elements that is not in the DOM
 use findBy for waiting for a element to appear after sometime in the component
+
+custom hooks tests doesn't use screen, meanwhile it use result return from render.
